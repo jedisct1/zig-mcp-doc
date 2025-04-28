@@ -22,6 +22,7 @@ while [ $offset -lt $file_size ]; do
   echo '```' >> "$output_file"  
   cat "$output_file.tmp" >> "$output_file"
   echo '```' >> "$output_file"
+  rm -f "$output_file.tmp"
   echo "Created $output_file"
   offset=$((offset + max_chars))
   counter=$((counter + 1))
